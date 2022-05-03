@@ -4,5 +4,4 @@ A restful service that gives opportunity to create events by organizators or to 
 #You have to register and login to able to use system.
 #JWT Bearer is used for authentication, session expires in 10 minutes after login.
 #There are 4 types of roles: Admin, Organizator, Participant and Company, each role has own controller and accesibility.
-
 #Database has been created by me and has been combined with Entity Framework Identity tables.
