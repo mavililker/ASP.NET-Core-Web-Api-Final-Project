@@ -1,0 +1,963 @@
+{
+	"info": {
+		"_postman_id": "b4936cf9-070e-44b9-b78e-d63a98bc7389",
+		"name": "Events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "RegisterAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"admin2@gmail.com\",\r\n    \"Name\": \"Admin2\",\r\n    \"SurName\": \"Admin2\",\r\n    \"Password\":\"Asdqwe123\",\r\n    \"ConfirmPassword\":\"Asdqwe123\",\r\n    \"Role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"admin@gmail.com\",\r\n    \"Password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Admin/GetCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Admin",
+								"GetCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Admin/GetCities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Admin",
+								"GetCities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"CityName\":\"Eskisehir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Admin/AddCity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Admin",
+								"AddCity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"CategoryName\":\"Concert\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Admin/AddCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Admin",
+								"AddCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CategoryName\":\"Theatre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Admin/UpdateCategory/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Admin",
+								"UpdateCategory",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjUxMDA5OTc3LCJleHAiOjE2NTEwMTA1NzcsImlhdCI6MTY1MTAwOTk3NywiaXNzIjoiSnd0VG9rZW5XaXRoSWRlbnRpdHkiLCJhdWQiOiJKd3RUb2tlbldpdGhJZGVudGl0eSJ9.sjJg8P5GCkjrEXRi-TLsyiX5z4p4oiZjFvXfDfdeX2I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:58868/api/Admin/DeleteCategory/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Admin",
+								"DeleteCategory",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjUxNDQ4MDU3LCJleHAiOjE2NTE0NDg2NTcsImlhdCI6MTY1MTQ0ODA1NywiaXNzIjoiSnd0VG9rZW5XaXRoSWRlbnRpdHkiLCJhdWQiOiJKd3RUb2tlbldpdGhJZGVudGl0eSJ9.5rHrdPneuIko8Xrf3DfXkm38KWk43dqvC43Bt634Tro",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Organizator",
+			"item": [
+				{
+					"name": "RegisterOrganizator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"organizator@gmail.com\",\r\n    \"Name\": \"Organizator\",\r\n    \"SurName\": \"Organizator\",\r\n    \"Password\":\"Asdqwe123\",\r\n    \"ConfirmPassword\":\"Asdqwe123\",\r\n    \"Role\": \"Organizator\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginOrganizator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"organizator@gmail.com\",\r\n    \"Password\":\"Asdqwe123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Organizator/GetCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Organizator",
+								"GetCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Organizator/GetCities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Organizator",
+								"GetCities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEvent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"EventName\":\"YYY Concert\",\r\n\"FinalDate\":\"2022-05-30\",\r\n\"Description\":\"Event\",\r\n\"Date\":\"2022-07-05\",\r\n\"Capacity\":550,\r\n\"IsTicket\":\"No\",\r\n\"CityID\":7,\r\n\"CategoryID\":13,\r\n\"Price\":\"0\",\r\n\"Address\":\"Address\",\r\n\"IsCanceled\":\"No\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Organizator/AddEvent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Organizator",
+								"AddEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsOrganizator",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Organizator/GetEvents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Organizator",
+								"GetEvents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PartialUpdateEvent",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isCanceled\":\"Yes\",\r\n    \"Capacity\":10,\r\n    \"Address\":\"adr\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Organizator/PartialUpdateEvent/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Organizator",
+								"PartialUpdateEvent",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0OGJhNDBjYy1lNTk3LTQyNzYtODU5ZC0xNTVhYzdlM2ZkNWUiLCJ1bmlxdWVfbmFtZSI6Ik9yZ2FuaXphdG9yIiwiZW1haWwiOiJvcmdhbml6YXRvckBnbWFpbC5jb20iLCJyb2xlIjoiT3JnYW5pemF0b3IiLCJuYmYiOjE2NTE0NTM1MzcsImV4cCI6MTY1MTQ1NDEzNywiaWF0IjoxNjUxNDUzNTM3LCJpc3MiOiJKd3RUb2tlbldpdGhJZGVudGl0eSIsImF1ZCI6Ikp3dFRva2VuV2l0aElkZW50aXR5In0.3MvDqXY_gFyduKxRsOoRTKG02EfdN4-vmpk3HSZIeoY",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Participant",
+			"item": [
+				{
+					"name": "RegisterParticipant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"participant@gmail.com\",\r\n    \"Name\": \"Participant\",\r\n    \"SurName\": \"Participant\",\r\n    \"Password\":\"Asdqwe123\",\r\n    \"ConfirmPassword\":\"Asdqwe123\",\r\n    \"Role\": \"Participant\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginParticipant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"participant@gmail.com\",\r\n    \"Password\":\"Asdqwe123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEvents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetEvents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetEvents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetCities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetCities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsByCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetEventsByCategory/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetEventsByCategory",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsByCity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetEventsByCity/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetEventsByCity",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEventUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"EventID\":4,\r\n\"isAttend\":\"Yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/AddEventUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"AddEventUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PartialUpdateEventParticipant",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IsAttend\":\"No\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/PartialUpdateEvent/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"PartialUpdateEvent",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsIsAttend",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetEventsIsAttend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetEventsIsAttend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsNoAttend",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetEventsNoAttend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetEventsNoAttend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsCanceled",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58868/api/Participant/GetEventsCanceled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Participant",
+								"GetEventsCanceled"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNTZjMmZjZS02MzlhLTQyNGYtYjNlZC1hYjlmMzMzNDQ2NDkiLCJ1bmlxdWVfbmFtZSI6IlBhcnRpY2lwYW50IiwiZW1haWwiOiJwYXJ0aWNpcGFudEBnbWFpbC5jb20iLCJyb2xlIjoiUGFydGljaXBhbnQiLCJuYmYiOjE2NTE0ODQxOTEsImV4cCI6MTY1MTQ4NDc5MSwiaWF0IjoxNjUxNDg0MTkxLCJpc3MiOiJKd3RUb2tlbldpdGhJZGVudGl0eSIsImF1ZCI6Ikp3dFRva2VuV2l0aElkZW50aXR5In0.Qb8XROOC6hd5ZQ4l2okdh8cYkOo4fyrc5mAcMOMutOs",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "RegisterCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CompanyName\":\"Biletix\",\r\n    \"Website\":\"biletix.com\",\r\n    \"Domain\":\"Domain\",\r\n    \"Email\":\"biletix@gmail.com\",\r\n    \"Password\":\"Asdqwe123\",\r\n    \"ConfirmPassword\":\"Asdqwe123\",\r\n    \"Role\":\"Company\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/RegisterCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"RegisterCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"biletix@gmail.com\",\r\n    \"Password\":\"Asdqwe123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:58868/api/User/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"User",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventsCompany",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:58868/api/Company/GetEvents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58868",
+							"path": [
+								"api",
+								"Company",
+								"GetEvents"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlOTc1YzM5YS04ZDBiLTQ0N2EtYTEyNC03M2U5OTlkYjMyMjQiLCJ1bmlxdWVfbmFtZSI6Ii4iLCJlbWFpbCI6ImJpbGV0aXhAZ21haWwuY29tIiwicm9sZSI6IkNvbXBhbnkiLCJuYmYiOjE2NTE0ODQ1NzAsImV4cCI6MTY1MTQ4NTE3MCwiaWF0IjoxNjUxNDg0NTcwLCJpc3MiOiJKd3RUb2tlbldpdGhJZGVudGl0eSIsImF1ZCI6Ikp3dFRva2VuV2l0aElkZW50aXR5In0.iLr_8znFQhFKf44Sds750ZTRE6ciKT2_TV9SDtxFkbA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
